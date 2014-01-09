@@ -12,11 +12,12 @@ def home():
 
 
 
-@app.route("/register")
+@app.route("/register", methods = ["GET", "POST"])
 def register():
-
-
-@app.route("/login")
+    if request.method == "GET":
+        return render_template("register.html")
+        
+@app.route("/login", methods = ["GET", "POST"])
 def login():
 
 @app.route("/search")
