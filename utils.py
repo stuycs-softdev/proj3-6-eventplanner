@@ -12,14 +12,14 @@ def addUser(username, password):
 ##    db.insert(user: 'username', password: 'password')
 
 
-def checkUser():
-#returns t or f
-    db = getDB
+def checkUser(username):
+#returns t or f if the user already exists
+    db = getDB()
 
-def checkPass():
+def checkPass(username, password):
+#Function required for login. Check that the password is 
 
-
-def changePass():
-
+def changePass(username, oldpass, newpass):
+#Change the user's password, maintain username.
 
 
