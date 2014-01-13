@@ -11,7 +11,6 @@ def home():
 
 
 
-
 @app.route("/register", methods = ["GET", "POST"])
 def register():
     if request.method == "GET":
@@ -19,6 +18,17 @@ def register():
         
 @app.route("/login", methods = ["GET", "POST"])
 def login():
+## THIS MAY OR MAY NOT BE A REAL FLASK THING
+    if request.method == "GET":
+            return render_template("login.html")
+    else:
+        username = input.get("username")
+        password = input.get("password")
+        if username in session:
+            return "Logged in as " + username
+        else:
+            if checkPass(username, password)
+        
 
 @app.route("/search")
 def search():
