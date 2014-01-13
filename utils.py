@@ -8,18 +8,42 @@ def getDB():
 
 
 def addUser(username, password):
-    db = getDB()
 ##    db.insert(user: 'username', password: 'password')
+    db = getDB()
+    temp = db.find_one({'username': username}, fields= {'_id': False})
+    if temp == None:
+        db.insert({'username' : username, 'password': password})
+        return True
+    else:
+        return False
 
 
 def checkUser(username):
-#returns t or f if the user already exists
+#returns t if the user already exists
     db = getDB()
+    temp = db.find_one({'username': username}, fields = {'_id' : False})
+    if temp == None:
+        return False
+    else: 
+        return True
+
 
 def checkPass(username, password):
-#Function required for login. Check that the password is 
+#Function required for login. Check that the password works. Returns t if logs in.
+    db = getDB()
+    temp = db. find_one({'username': username, 'password': password})
+    if temp == None:
+        return False
+    else:
+        return True
+    
+    
 
 def changePass(username, oldpass, newpass):
 #Change the user's password, maintain username.
-
-
+    db = getDB()
+    if checkPass(username, oldpass):
+        db.update({'username': username}, {'$set': {'password': newpass}})
+        return True
+    else:
+        return False
