@@ -10,5 +10,5 @@ Eventplanner
 
 
 ##The Project
->Our project is an application that helps user plan out events. People can search up venues and plan their events with specific ideas in mind, or browse through recommended events. Once an event is planned, users may share their plans with others on facebook.
+>Our project is an application that helps user plan out events. People can look up venues in a certain area, or search for a particular venue in particular. Once an event is planned, users may share their plans with others on facebook.
 
