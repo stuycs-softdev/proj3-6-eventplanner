@@ -1,0 +1,47 @@
+<!DOCTYPE>
+<html lang="en">
+
+<head>
+  <title> Register </title>
+  <meta charset="utf-8">
+
+</head>
+
+<body>
+
+    <form class="pure-form pure-form-aligned" action="/register" method = "post">
+      <fieldset>
+	<div class="pure-control-group">
+	  <label for="username"> Username </label>
+	  <input name="username" class="pure-input-1-2" type="txt" required>
+	</div>
+
+	<div class="pure-control-grop">
+	  <label for="email">Email Address</label>
+	  <input name="email" class="pure-input-1-2" type="text" required>
+        </div>
+        <div class="pure-control-group">
+          <label for="password">Password</label>
+          <input name="password" class="pure-input-1-2" type="password" required>
+        </div>
+        <div class="pure-control-group">
+          <label for="confirm">Confirm Password</label>
+          <input name="confirm" class="pure-input-1-2" type="password" required>
+        </div>
+        <div class="pure-control-group">
+          <label for="securityq">Security Question</label>
+          <select name="securityq" class="pure-input-1-2">
+            <option value="none"></option>
+            <option value="color">What's your favorite color?</option>
+                                        <option value="app">What's your favorite web app?</option>
+            <option value="teacher">Who's your favorite SoftDev teacher?</option>
+          </select>
+        </div>
+        <div class="pure-control-group">
+          <label for="securitya">Security Answer</label>
+          <input name="securitya" class="pure-input-1-2" type="text" placeholder="Answer the Question Above">
+        </div>
+        <div class="pure-controls">
+          <button class="pure-button pure-button-primary" type="submit">Register</button>
+        </div>
+      </fieldset>
