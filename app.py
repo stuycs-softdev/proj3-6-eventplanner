@@ -8,7 +8,7 @@ app=Flask(__name__)
 
 @app.route("/")
 def home():
-
+    return render_template("home.html")
 
 
 @app.route("/register", methods = ["GET", "POST"])
@@ -32,14 +32,18 @@ def login():
 
 @app.route("/search")
 def search():
+    return render_template("search.html")
+    
 
 
 @app.route("/results")
 def res():
+    return render_template("results.html")
 
 
 @app.route("/share")
 def share():
+    return render_template("share.html")
 
 
 if __name__=="__main__":
