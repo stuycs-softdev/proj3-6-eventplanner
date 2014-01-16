@@ -1,25 +1,30 @@
-body
-{
-background-color: #e0e0e0;
+body {
+    background-color: #e0e0e0;
 }
 
-h1
-{
-letter-spacing:3px;
-text-align: center;
-font-family:"Avantgarde", sans-serif;
-color: white;
-font-size:80%
+h1 {
+    letter-spacing:3px;
+    text-align: center;
+    font-family:"Avantgarde", sans-serif;
+    color: white;
+    font-size:80%
 }
 
-.top
-{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:40%;
-background-color:#000033;
-z-index:-1;
+.top {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:40%;
+    background-color:#000033;
+    z-index:-1;
 }
 
+#main_logo_area {
+    position:relative;
+    float:left;
+    height:750px;
+    width:100%;
+    overflow:hidden;
+    z-index:4
+}
