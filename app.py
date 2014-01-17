@@ -9,7 +9,7 @@ app=Flask(__name__)
 @app.route("/")
 def home():
         if "username" not in session:
-                return render_template("home.html")
+                return render_template("index.html")
         else:
                 return redirect("/search")
 
