@@ -2,3 +2,12 @@ body{
   background-color: black;
 }
 
+h1{
+  letter-spacing: 3px;
+  text-align: center;
+  font-family: "Avantgarde" , sans-serif;
+  color: white;
+  font-size: 150%;
+  border-style: dashed;
+}
+
