@@ -40,7 +40,7 @@ def login():
 
 @app.route("/search")
 def search():
-    return render_template("search.html")
+    return render_template("search.html", username = username)
     
 
 
