@@ -8,7 +8,10 @@ app=Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("home.html")
+        if "username" not in session:
+                return render_template("home.html")
+        else:
+                return redirect("/search")
 
 
 @app.route("/register", methods = ["GET", "POST"])
@@ -19,15 +22,20 @@ def register():
 @app.route("/login", methods = ["GET", "POST"])
 def login():
 ## THIS MAY OR MAY NOT BE A REAL FLASK THING
-    if request.method == "GET":
-            return render_template("login.html")
-    else:
-        username = input.get("username")
-        password = input.get("password")
-        if username in session:
-            return "Logged in as " + username
+    if request.method=="GET":
+                return render_template("login.html")
+        username = request.form['name']
+        password = request.form['password']
+        print username
+        print password
+        if not username or not password:    
+                return render_template("login.html", message = "Please fill out the empty fields!")
+        elif utils.checkPass(username, password): 
+                session["username"] = username
+                return redirect("/search")
         else:
-            if checkPass(username, password)
+                return render_template("login.html", message = "Incorrect username and password combination.")
+
         
 
 @app.route("/search")
