@@ -2,3 +2,22 @@ body {
   background-color: black;
 }
 
+h1{
+	letter-spacing:3px;
+	text-align: center;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+	color: white;
+	font-size:200%;
+}
+
+h2{
+	letter-spacing:2px;
+	text-align: center;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+	color: white;
+	font-size: 150%;
+}
+
+#form{
+	text-align: center;
+}
