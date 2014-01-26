@@ -1,1 +1,34 @@
-<!--results-->
+<!DOCTYPE>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title> Results </title>
+		<link rel="stylesheet" href="http:/yui.yahoo.apis.com/pure/0.3.0/pure-min.css">
+		<link rel="stylehseet" href="../static/results.css">
+	</head>
+
+	<body>
+		{% block content %}
+		<h1> {{username}}'s Results! </h1>
+		<div class="result">
+			{% for i in range(results|length) %}
+				<li>
+					<ul class="reslist">
+						{% for result in results[i] %}
+						<li>
+							{{result}}
+						</li>
+						{% endfor %}
+					</ul>
+				</li>
+			{% endfor %}
+		</div>
+
+		{% endblock %}
+	</body>
+
+	<script>
+		('.reslist').delegate('li', 'click', function(){
+			
+		})
+</html>
