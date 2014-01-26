@@ -18,7 +18,7 @@ def addUser(username, password):
     db = getDB()
     temp = db.find_one({'username': username}, fields= {'_id': False})
     if temp == None:
-        db.insert({'username' : username, 'password': password 'events': []})
+        db.insert({'username' : username, 'password': password, 'events': []})
         return True
     else:
         return False
