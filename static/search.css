@@ -2,6 +2,24 @@ body {
   background-color: black;
 }
 
+.bar{
+	backgroun-color: gray;
+}
+
+#title{
+	text-align: left;
+	color: white;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+	letter-spacing: 2px;
+}
+
+#prof{
+	position: absolute;
+	right: 0px;
+	color: white;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+}
+
 h1{
 	letter-spacing:3px;
 	text-align: center;
