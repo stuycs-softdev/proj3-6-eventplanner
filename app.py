@@ -56,7 +56,10 @@ def search():
 
 @app.route("/results")
 def results():
-    return render_template("results.html")
+    if "results" not in session:
+        return redirect("route")
+    else:
+        return render_template("results.html", results=session["results"])
 
 
 @app.route("/share")
