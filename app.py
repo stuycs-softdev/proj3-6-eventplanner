@@ -1,6 +1,7 @@
 from flask import Flask, request,render_template
 import json
 import urllib,urllib2
+import yelp
 
 app=Flask(__name__)
 
@@ -40,12 +41,21 @@ def login():
 
 @app.route("/search")
 def search():
-    return render_template("search.html", username = username)
+    start = request.form.get("1","")
+    end = request.form.get("2","")
+    if start == None or end == None:
+        return render_template("route.html")
+    try:
+        results = yelp.search(food, location)
+    except KeyError:
+        return render_template("route.html")
+    session["results"] = results
+    return redirect("results")
     
 
 
 @app.route("/results")
-def res():
+def results():
     return render_template("results.html")
 
 
