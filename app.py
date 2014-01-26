@@ -20,6 +20,21 @@ def home():
 def register():
     if request.method == "GET":
         return render_template("register.html")
+    if request.form.get("password_register","")==request.form.get("confirmpassword_register",""):
+        #createUser will return a number depending on what the error was
+        result=utils.createUser(request.form.get("username_register","").lower(),request.form.get("password_register",""))
+        #success. Login page will have confirmation message
+        if result==0:
+            return render_template("home.html",type_register=0)
+            #username is already taken
+        elif result==1:
+            return render_template("home.html",type_register=1)
+            #username or pw is invalid
+        else: 
+            return render_template("home.html",type_register=2)
+        #pw mismatch
+    else:
+        return render_template("home.html",type_register=3)
         
 @app.route("/login", methods = ["GET", "POST"])
 def login():
