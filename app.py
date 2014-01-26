@@ -2,6 +2,7 @@ from flask import Flask, request,render_template
 import json
 import urllib,urllib2
 import yelp
+import utils
 
 app=Flask(__name__)
 
@@ -22,20 +23,22 @@ def register():
         
 @app.route("/login", methods = ["GET", "POST"])
 def login():
-## THIS MAY OR MAY NOT BE A REAL FLASK THING
-    if request.method=="GET":
-                return render_template("login.html")
-        username = request.form['name']
-        password = request.form['password']
-        print username
-        print password
-        if not username or not password:    
-                return render_template("login.html", message = "Please fill out the empty fields!")
-        elif utils.checkPass(username, password): 
-                session["username"] = username
-                return redirect("/search")
+    if request.method=="POST":
+        result = utils.authorize(str(request.form.get("username_login","")).lower(), str(request.form.get("password_login","")))
+        #successful login
+	if result == 0:  
+            session["username"] = request.form.get("username_login","")
+            return redirect("/route")
+        #failed attempt!
         else:
-                return render_template("login.html", message = "Incorrect username and password combination.")
+            return render_template("home.html",type_login=1)
+    else:
+        return render_template("home.html")
+
+@app.route("/logout")
+def logout():
+    session.pop("username",None)
+    return redirect("/")
 
         
 

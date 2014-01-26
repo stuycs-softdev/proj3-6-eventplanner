@@ -6,6 +6,12 @@ def getDB():
     db = client.users
     return db
 
+def authorize(username, password):
+    user = db.Collections.find_one({'username':username, 'password':password})
+    if user:
+        return 0
+    else:
+        return None
 
 def addUser(username, password):
 ##    db.insert(user: 'username', password: 'password')
