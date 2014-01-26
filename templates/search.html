@@ -9,20 +9,22 @@
   </head>
   
   <body>
-    <div class="bar">
-      <p id="title">
-          Edric's Plan-tations
-        <a id="prof" href="profile.html"> Profile </a>
-      </p>
+    <div class="bg">
+      <div class="bar">
+        <p id="title">
+            Edric's Plan-tations
+          <a id="prof" href="profile.html"> Profile </a>
+        </p>  
+      </div>
+      <h1>Welcome, {{username}}</h1>
+      <h2>Want to make an event? Start your search here:</h2>
+      <form class="pure-form" id="form">
+  		  <fieldset>
+  		    <input type="search" placeholder ="Keyword, place, etc...">
+  		    <button type="submit" class="pure-button pure-button-primary">Search</button>
+  		  </fieldset>
+  	  </form>
     </div>
-    <h1>Welcome, {{username}}</h1>
-    <h2>Want to make an event? Start your search here:</h2>
-  	<form class="pure-form" id="form"
-  		<fieldset>
-  			<input type="search" placeholder ="Keyword, place, etc...">
-  			<button type="submit" class="pure-button pure-button-primary">Search</button>
-  		</fieldset>
-  	</form>
 
   </body>
   

@@ -1,26 +1,38 @@
-body {
-  background-color: black;
+body
+{
+	background-color: black;
+ 	background-image: url(images/party_05.jpg);
+  	background-size: 100% 150%;
+  	opacity: 1;
+  	z-index: -1;
+
 }
 
-.bar{
-	backgroun-color: gray;
+
+.bar
+{
+	background-color: gray;
+	z-index: 0;
 }
 
-#title{
+#title
+{
 	text-align: left;
 	color: white;
 	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
 	letter-spacing: 2px;
 }
 
-#prof{
+#prof
+{
 	position: absolute;
 	right: 0px;
 	color: white;
 	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
 }
 
-h1{
+h1
+{
 	letter-spacing:3px;
 	text-align: center;
 	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
@@ -28,7 +40,8 @@ h1{
 	font-size:200%;
 }
 
-h2{
+h2
+{
 	letter-spacing:2px;
 	text-align: center;
 	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
@@ -36,6 +49,7 @@ h2{
 	font-size: 150%;
 }
 
-#form{
+#form
+{
 	text-align: center;
 }
