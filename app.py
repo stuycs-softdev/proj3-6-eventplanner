@@ -48,7 +48,7 @@ def login():
             session["username"] = username
         else:
             return redirect(url_for("login"))
-        return redirect(url_for("home"))
+    return redirect(url_for("home"))
 
 @app.route("/logout")
 def logout():
