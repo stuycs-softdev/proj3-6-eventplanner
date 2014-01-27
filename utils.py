@@ -4,12 +4,12 @@ from flask import session
 def register(username, password, confirm, securityq, securitya):
     db = getDB()
     if password != confirm:
-        app.session["error"] = "passMismatch"
+        session["error"] = "passMismatch"
     elif db.Collections.find_one({"username" : username}) is None:
         db.Collections.insert({ "username" : username, "password" : password, "securityq" : securityq, "securitya" : securitya })
         return True
     else:
-        app.session["error"] = "userExists"
+        session["error"] = "userExists"
     return False
 
 def getDB():
