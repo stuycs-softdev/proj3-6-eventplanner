@@ -1,11 +1,11 @@
 from pymongo import MongoClient
 from flask import session
 
-def register(username, password, confirm, securityq, answer):
+def register(username, password, confirm, securityq, securitya):
     if password != passRetype:
         app.session["error"] = "passMismatch"
     elif users.find_one({"username" : username}) is None:
-        users.insert({ "username" : username, "password" : password, "security" : security, "answer" : answer })
+        users.insert({ "username" : username, "password" : password, "securityq" : securityq, "securitya" : securitya })
         return True
     else:
         app.session["error"] = "userExists"
