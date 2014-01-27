@@ -9,7 +9,7 @@ def register(username, password, confirm, securityq, securitya):
         db.Collections.insert({ "username" : username, "password" : password, "securityq" : securityq, "securitya" : securitya })
         return True
     else:
-        session["error"] = "userExists"
+        redirect("register")
     return False
 
 def getDB():
