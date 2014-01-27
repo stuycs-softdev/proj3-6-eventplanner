@@ -2,6 +2,7 @@ from pymongo import MongoClient
 from flask import session
 
 def register(username, password, confirm, securityq, securitya):
+    db = getDB()
     if password != confirm:
         app.session["error"] = "passMismatch"
     elif db.Collections.find_one({"username" : username}) is None:
@@ -77,5 +78,6 @@ def addEvent(result):
     db.update({'events' : events.append({'location': result[location], 'date' : result[date], 'time' : result[time], 'attendees' : result[attendees]})})
     
 def getEvents(username):
+    db = getDB()
     temp = db.find_one({'username': username})
     return temp['events']
