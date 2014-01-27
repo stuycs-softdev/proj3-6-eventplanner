@@ -47,9 +47,9 @@ def login():
             return redirect("/search")
         #failed attempt!
         else:
-            return render_template("index.html",type_login=1)
+            return render_template("index.html")
     else:
-        return render_template("index.html")
+        return render_template("login.html")
 
 @app.route("/logout")
 def logout():
