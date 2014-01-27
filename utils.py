@@ -6,7 +6,7 @@ def register(username, password, confirm, securityq, securitya):
     if password != confirm:
         app.session["error"] = "passMismatch"
     elif db.Collections.find_one({"username" : username}) is None:
-        db.insert({ "username" : username, "password" : password, "securityq" : securityq, "securitya" : securitya })
+        db.Collections.insert({ "username" : username, "password" : password, "securityq" : securityq, "securitya" : securitya })
         return True
     else:
         app.session["error"] = "userExists"
