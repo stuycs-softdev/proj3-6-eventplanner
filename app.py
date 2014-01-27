@@ -30,7 +30,7 @@ def register():
          securitya = request.form["securitya"]
 
          if utils.register(username, password, confirm, securityq, securitya):
-             return redirect(url_for("home"))
+             return redirect(url_for("search"))
          else:
              return redirect(url_for("register"))
      else:
