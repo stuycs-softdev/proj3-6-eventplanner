@@ -89,7 +89,7 @@ def makeevent():
     if "username" not in session:
 	    return redirect("home")
     if request.method=="POST":
-        result = {"location" : str(request.form.get("event_location",""),)
+        result = {"location" : str(request.form.get("event_location","")),
 		  "date" : str(request.form.get("event_date","")),
 		  "time" : str(request.form.get("event_time","")),
 		  "attendees" : [session["username"]]}
