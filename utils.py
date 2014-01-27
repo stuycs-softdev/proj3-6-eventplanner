@@ -14,7 +14,7 @@ def authorize(username, password):
     else:
         return None
 
-def addUser(username, password):
+def addUser(username, password): #for some reason our register doesn't seem to use this atm...
 ##    db.insert(user: 'username', password: 'password')
     db = getDB()
     temp = db.find_one({'username': username}, fields= {'_id': False})
@@ -25,7 +25,7 @@ def addUser(username, password):
         return False
 
 
-def checkUser(username):
+def checkUser(username): #same with comment above...we really need to fix register
 #returns t if the user already exists
     db = getDB()
     temp = db.find_one({'username': username}, fields = {'_id' : False})
