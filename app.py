@@ -24,11 +24,11 @@ def register():
      elif not utils.loggedIn():
          username = request.form["username"]
          password = request.form["password"]
-         passRetype = request.form["passRetype"]
-         security = request.form["security"]
+         passRetype = request.form["confirm"]
+         security = request.form["securityq"]
          answer = request.form["answer"]
 
-         if utils.register(username, password, passRetype, security, answer):
+         if utils.register(username, password, confirm, securityq, answer):
              return redirect(url_for("home"))
          else:
              return error()
