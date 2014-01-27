@@ -1,14 +1,33 @@
+// background cycling thing
+
 function cycleImages() {
     var $active = $('#background_cycler .active');
     var $next = ($('#background_cycler .active').next().length > 0) ? $('#background_cycler .active').next() : $('#background_cycler img:first');
-    $next.css('z-index',2);//move the next image up the pile
-    $active.fadeOut(1500,function(){//fade out the top image
-	$active.css('z-index',1).show().removeClass('active');//reset the z-index and unhide the image
-	$next.css('z-index',3).addClass('active');//make the next image the top one
+    $next.css('z-index',2);
+    $active.fadeOut(1500,function(){
+	$active.css('z-index',1).show().removeClass('active');
+	$next.css('z-index',3).addClass('active');
     });
 }
 
 $(window).load(function(){
-    $('#background_cycler').fadeIn(1500);//fade the background back in once all the images are loaded
-    setInterval('cycleImages()', 7000);
+    $('#background_cycler').fadeIn(1500);
+    setInterval('cycleImages()', 8000);
 })
+
+// scrolling thing
+
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
