@@ -4,48 +4,72 @@
   <head>
     <title> Register </title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/http:/yui.yahooapis.com/pure/0.3.0/pure-min.css">
-    <link rel="stylesheet" href="/static/register.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="../static/register.css">
   </head>
 
   <body>
-    <h1> REGISTER </h1>
-    <form class="pure-form pure-form-aligned" action="/register" method="post">
-      <fieldset>
-        <div class="pure-control-group">
-          <label for="username"> Username </label>
-          <input name="username" class="pure-input-1-2" type="txt" required>
-        </div>
+     <div class="hero">
+       <div class="hero-titles">
+         <h1>Register</h1>
+         <h2>Start groupventing immediately!</h2>
+       </div>
+     </div>
+     
+     <div class="pure-g">
+       <div class="pure-u-3-5" align="center"> 
 
-        <div class="pure-control-group">
-          <label for="password"> Password </label>
-          <input name="password" class="pure-input-1-2" type="password" required>
-        </div>
-
-        <div class="pure-control-group">
-          <label for="confirm"> Confirm Password </label>
-          <input name="confirm" class="pure-input-1-2" type="password" required>
-        </div>
-
-        <div class="pure-control-group">
-          <label for="securityq"> Security Question </label>
-          <select name="securityq" class="pure-input-1-2">
-            <option value="none"> </option>
-            <option value="color"> What's your favorite color? </option>
-            <option value="app"> What's your favorite web app? </option>
-            <option value="teacher"> Who's your favorite SoftDev teacher? </option>
-          </select>
-        </div>
-
-        <div class="pure-control-group">
-          <label for="securitya"> Security Answer</label>
-          <input name="securitya" class="pure-input-1-2" type="text" placeholder="Answer the Question Above">
-        </div>
-
-        <div class="pure-controls">
-          <button class="pure-button pure-button-primary" type="submit"> Register </button>
-        </div>
-      </fieldset>
-    </form>
+	 <form class="pure-form pure-form-aligned" action="/register" method="post">
+	   <fieldset>
+             <div class="pure-control-group">
+               <label for="username"> Username </label>
+               <input name="username" class="pure-input-2-3" type="txt" required>
+             </div>
+	     
+             <div class="pure-control-group">
+               <label for="password"> Password </label>
+               <input name="password" class="pure-input-2-3" type="password" required>
+             </div>
+	     
+             <div class="pure-control-group">
+               <label for="confirm"> Confirm Password </label>
+               <input name="confirm" class="pure-input-2-3" type="password" required>
+             </div>
+	     
+             <div class="pure-control-group">
+               <label for="securityq"> Security Question </label>
+               <select name="securityq" class="pure-input-2-3">
+		 <option value="none"> </option>
+		 <option value="color"> What's your favorite color? </option>
+		 <option value="app"> What's your favorite web app? </option>
+		 <option value="teacher"> Who's your favorite SoftDev teacher? </option>
+               </select>
+             </div>
+	     
+             <div class="pure-control-group">
+               <label for="securitya"> Security Answer</label>
+               <input name="securitya" class="pure-input-2-3" type="text" placeholder="Answer the Question Above">
+             </div>
+	     
+             <div class="pure-controls">
+               <button class="pure-button pure-button-primary" type="submit"> Register </button>
+             </div>
+	   </fieldset>
+	 </form>
+       </div>
+       <div class="pure-u-2-5">
+         <div class="box">
+           <div class="subhead subhead3">Testimonials</div>
+           <p>"groupvent offers so much versatility in options! I use it whenever I hang out with my friends now!"<br>&mdash; Dorit Rein
+           </p>
+	   <br>
+           <p>"I'm usually so indecisive with everything. groupvent really helps provide the best options available, even when I have no idea what I want to do!"<br>&mdash; Marlena Lui
+	   </p>
+         </div>
+       </div>
+       
+     </div>
+     
   </body>
+  
 </html>

@@ -1,13 +1,76 @@
 body{
-  background-color: black;
+  background-color:#000020;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-image: url('../static/images/background_01.jpg');
 }
 
-h1{
+label {
   letter-spacing: 3px;
   text-align: center;
   font-family: "Avantgarde" , sans-serif;
   color: white;
   font-size: 150%;
-  border-style: dashed;
 }
 
+.hero {
+    text-align: center;
+    margin: 10em auto 10em auto;
+}
+
+.hero-titles {
+    padding: 0 2em;
+}
+
+.hero h1 {
+    font-size: 4em;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    color: #B0C4DE;
+}
+
+.hero h2 {
+    font-size: 3em;
+    font-weight: 200;
+    color: #F0F8FF;
+    padding: 0;
+    margin-top: 0;
+    margin: 0.02em 0 0.8em;
+
+}
+
+p {
+    color: white; 
+    margin: 0; 
+    text-align: justify;
+    font-style: oblique; 
+}
+
+.box {
+    margin-right: 10em;
+}
+
+
+.subhead {
+    font-weight: 300;
+    color: #888;
+}
+
+.subhead1 {
+    margin: 30px 0 20px 0;
+}
+
+.subhead2 {
+    margin: 10px 0 20px 0;
+    font-size: 150%;
+    text-align: center;
+}
+
+.subhead3 {
+    margin: 0 20px 20px 0;
+    font-size: 150%;
+    font-family: "Avantgarde", sans-serif;
+}
