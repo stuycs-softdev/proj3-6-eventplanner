@@ -24,10 +24,10 @@ def authorize(username, password):
         return None
 
 def loggedIn():
-        if "username" in app.session:
+        if "username" in session:
                 return True
         else:
-                app.session["error"] = "mustLogin"
+                session["error"] = "mustLogin"
                 return False
 
 """
