@@ -32,7 +32,7 @@ def register():
          if utils.register(username, password, confirm, securityq, securitya):
              return redirect(url_for("home"))
          else:
-             return error()
+             return redirect(url_for("register"))
      else:
          return redirect(url_for("home"))
 
