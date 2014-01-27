@@ -10,5 +10,11 @@
 
 	<body>
 		<h1> {{username}}'s Profile </h1>
+		<h2> Events</h2>
+		<ul>
+			{% for item in events %}
+			<li> On {{item['date']}} at {{item['time']}} at {{item['location']}} </li>
+			{% endfor %}
+		</ul>
 
 	</body>
