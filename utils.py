@@ -53,9 +53,7 @@ def checkPass(username, password):
         return False
     else:
         return True
-"""
-    
-  """  
+
 
 def changePass(username, oldpass, newpass):
 #Change the user's password, maintain username.
