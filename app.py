@@ -106,7 +106,6 @@ def makeevent():
     def profile():
     	events = utils.getEvents(session["username"])
         return render_template("profile.html", username = session['username'], events = events)
-        ##UPDATE LATER TO DISPLAY USER'S EVENTS
 
 
 if __name__=="__main__":
