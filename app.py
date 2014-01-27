@@ -30,7 +30,7 @@ def register():
          securitya = request.form["securitya"]
 
          if utils.register(username, password, confirm, securityq, securitya):
-             return redirect(url_for("search"))
+             return redirect(url_for("home"))
          else:
              return redirect(url_for("register"))
      else:
@@ -48,7 +48,7 @@ def login():
             session["username"] = username
         else:
             return redirect(url_for("home"))
-    return redirect(url_for("home"))
+    return redirect(url_for("search"))
 
 @app.route("/logout")
 def logout():
