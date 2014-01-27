@@ -40,10 +40,10 @@ def register():
 @app.route("/login", methods = ["GET", "POST"])
 def login():
     if request.method=="POST":
-        result = utils.authorize(str(request.form.get("username_login","")).lower(), str(request.form.get("password_login","")))
+        result = utils.authorize(str(request.form.get("username","")).lower(), str(request.form.get("password","")))
         #successful login
 	if result == 0:  
-            session["username"] = request.form.get("username_login","")
+            session["username"] = request.form.get("username","")
             return redirect("/search")
         #failed attempt!
         else:
