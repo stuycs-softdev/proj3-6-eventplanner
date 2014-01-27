@@ -40,7 +40,7 @@ def register():
 @app.route("/login", methods = ["GET", "POST"])
 def login():
     if request.method=="POST":
-        result = utils.authorize(str(request.form.get("username","")).lower(), str(request.form.get("password","")))
+        result = utils.authorize(request.form.get("username","").lower(), request.form.get("password",""))
         #successful login
 	if result == 0:  
             session["username"] = request.form.get("username","")
