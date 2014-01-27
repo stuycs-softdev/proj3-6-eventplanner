@@ -1,6 +1,15 @@
 from pymongo import MongoClient
 from flask import session
 
+def register(username, password, passRetype, security, answer):
+    if password != passRetype:
+        app.session["error"] = "passMismatch"
+    elif users.find_one({"username" : username}) is None:
+        users.insert({ "username" : username, "password" : password, "security" : security, "answer" : answer })
+        return True
+    else:
+        app.session["error"] = "userExists"
+    return False
 
 def getDB():
     client = MongoClient()
@@ -14,6 +23,7 @@ def authorize(username, password):
     else:
         return None
 
+"""
 def addUser(username, password): #for some reason our register doesn't seem to use this atm...
 ##    db.insert(user: 'username', password: 'password')
     db = getDB()
@@ -43,6 +53,7 @@ def checkPass(username, password):
         return False
     else:
         return True
+"""
     
   """  
 
