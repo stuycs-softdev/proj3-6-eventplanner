@@ -16,7 +16,7 @@ def home():
                 return redirect("/search")
 
 
-@app.route("/register", methods = ["GET", "POST"])
+@app.route("/register", methods = ["GET", "POST"]) #HELP
 def register():
     if request.method == "GET":
         return render_template("register.html")
