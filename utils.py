@@ -16,6 +16,7 @@ def getDB():
     return db
 
 def authorize(username, password):
+    db = getDB()
     user = db.Collections.find_one({'username':username, 'password':password})
     if user:
         return 0
