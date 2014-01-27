@@ -75,7 +75,7 @@ body {
 
 #outer_wrap {
     width:80%;
-    margin:50px 550px 50px 0px;
+    margin:50px auto;
 }
 
 #wrap {
@@ -83,8 +83,8 @@ body {
     height:500px;
     position:relative;
     z-index:1;
-    padding:60px 20px;
-    margin-left: 550px; 
+    padding:60px 20px; 
+    margin: inherit; 
 }
 
 #wrap_background {
@@ -104,4 +104,8 @@ body {
 p {
    font-size: x-large; 
    line-height: 1.5;  
+}
+
+.information {
+    background-color:#87CEFA; 
 }
