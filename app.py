@@ -44,7 +44,7 @@ def login():
     elif not utils.loggedIn():
         username = request.form["username"]
         password = request.form["password"]
-        if utils.authenticate(username, password):
+        if utils.authorize(username, password):
             session["username"] = username
         else:
             return redirect(url_for("login"))
