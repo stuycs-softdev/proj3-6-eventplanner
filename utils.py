@@ -23,6 +23,13 @@ def authorize(username, password):
     else:
         return None
 
+def loggedIn():
+        if "username" in app.session:
+                return True
+        else:
+                app.session["error"] = "mustLogin"
+                return False
+
 """
 def addUser(username, password): #for some reason our register doesn't seem to use this atm...
 ##    db.insert(user: 'username', password: 'password')
