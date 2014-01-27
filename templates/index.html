@@ -7,9 +7,11 @@
     <title> Home </title>
 
     <link rel="stylesheet" href="../static/index.css">
-    <link rel="stylesheet" href="http:/yui.yahooapis.com/pure/0.3.0/pure-min.css">
-    <link rel="stylesheet" href="http:/netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-    
+    <link rel="stylesheet" href="../static/modal.css">
+
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script> 
     <script src="../static/index.js"></script>
   
@@ -53,13 +55,36 @@
 		<i class="fa fa-bell"></i>
 		Try it out! </a> 
 	    </div>
-	    
-	    
+	   
 	    <div class="pure-u-1-5" align="center">
-	      <a class="pure-button" href="#" style="background-color:#E0FFFF">
+	      <a class="pure-button" href="#login" style="background-color:#E0FFFF">
 		<i class="fa fa-sign-in"></i>
 		Sign In!    </a>
 	    </div>
+
+	    <section class="semantic-content" id="login" tabindex="-1"
+		     role="dialog" aria-labelledby="login" aria-hidden="true">
+	      <div class="modal-inner" style="letter-spacing:0em">
+		<header id="login">
+		  <h1> Login </h1> 
+		</header>
+		<div class="modal-content" align="center">
+		  <p>
+		    Welcome back to groupvent! 
+		    <br> 
+		    Enter your username and password below to login.
+		  </p>
+		  <form class="pure-form pure-form-stacked" action="/login" method="post">
+		    <input name="username" type="text" placeholder="Username" required>
+		    <input name="password" type="password" placeholder="Password" required>
+		    <br>
+		    <a class="pure-button pure-button-primary" type="submit">Login</a>
+		  </form>
+		</div>
+	      </div>
+	      <a href="#!" class="modal-close" title="Close this modal" data-close="Close"
+		 data-dismiss="modal">×</a>
+	    </section>
 	    
 	    <div class="pure-u-1-5" align="center">
 	      <a class="pure-button" href="#" style="background-color:#FFE4B5">
@@ -74,7 +99,7 @@
 	    
 	    <div class="pure-u-1-3">
 	    </div>
-	    
+	   
 	    <div class="pure-u-1-3" align="center">
 	      <a class="pure-button pure-button-primary" href="#description">
 		<i class="fa fa-angle-double-down"></i>
@@ -92,11 +117,19 @@
       </div>
       
     </div>
-    
-    <div class = 
-	 <div class="information">
-	   <span id="description"> What is groupvent? </span>
-	 </div>
+ 
+    <div class="pure-g-1-1">
+      <div class="information">
+	<h2> <span id="description"> What is groupvent? </span> </h2>
+
+	<div class="content">
+	  
+	</div>
+      </div>
+    </div>
+
+    <script src="../static/modal.js"></script>
+
   </body>
   
 </html> 
