@@ -17,7 +17,7 @@ def home():
                 return redirect("/search")
 
 
-@app.route("/register", methods = ["GET", "POST"]) #HELP
+@app.route("/register", methods = ["GET", "POST"])
 def register():
      if request.method == "GET":
          return render_template("register.html")
@@ -40,15 +40,15 @@ def register():
 @app.route("/login", methods = ["GET", "POST"])
 def login():
     if request.method == "GET":
-        return render_template("login.html")
+        return render_template("index.html")
     elif not utils.loggedIn():
         username = request.form["username"]
         password = request.form["password"]
         if utils.authorize(username, password):
             session["username"] = username
         else:
-            return redirect(url_for("login"))
-    return redirect(url_for("home"))
+            return redirect(url_for("home"))
+    return redirect(url_for("search"))
 
 @app.route("/logout")
 def logout():
@@ -57,8 +57,10 @@ def logout():
 
         
 
-@app.route("/search")
+@app.route("/search", methods = ["GET", "POST"])
 def search():
+    if request.method == "GET":
+	return render_template("search.html")
     start = request.form.get("1","")
     end = request.form.get("2","")
     if start == None or end == None:
@@ -66,7 +68,7 @@ def search():
     try:
         results = yelp.search(food, location)
     except KeyError:
-        return render_template("route.html")
+        return render_template("results.html")
     session["results"] = results
     return redirect("results")
     
