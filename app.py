@@ -39,17 +39,16 @@ def register():
         
 @app.route("/login", methods = ["GET", "POST"])
 def login():
-    if request.method=="POST":
-        result = utils.authorize(request.form.get("username","").lower(), request.form.get("password",""))
-        #successful login
-	if result == 0:  
-            session["username"] = request.form.get("username","")
-            return redirect("/search")
-        #failed attempt!
-        else:
-            return render_template("index.html")
-    else:
+    if request.method == "GET":
         return render_template("login.html")
+    elif not utils.loggedIn():
+        username = request.form["username"]
+        password = request.form["password"]
+        if utils.authenticate(username, password):
+            session["username"] = username
+        else:
+            return redirect(url_for("login"))
+        return redirect(url_for("home"))
 
 @app.route("/logout")
 def logout():
