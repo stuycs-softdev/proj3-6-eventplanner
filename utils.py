@@ -4,7 +4,7 @@ from flask import session
 def register(username, password, confirm, securityq, securitya):
     if password != confirm:
         app.session["error"] = "passMismatch"
-    elif users.find_one({"username" : username}) is None:
+    elif db.Collections.find_one({"username" : username}) is None:
         users.insert({ "username" : username, "password" : password, "securityq" : securityq, "securitya" : securitya })
         return True
     else:
