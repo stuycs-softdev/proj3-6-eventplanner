@@ -101,6 +101,11 @@ def makeevent():
                 return render_template("profile.html")
     else:
         return render_template("makeevent.html")
+        
+@app.route("/profile")
+    def profile():
+        return render_template("profile.html")
+        ##UPDATE LATER TO DISPLAY USER'S EVENTS
 
 
 if __name__=="__main__":
