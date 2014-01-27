@@ -44,7 +44,7 @@ def login():
         #successful login
 	if result == 0:  
             session["username"] = request.form.get("username_login","")
-            return redirect("/route")
+            return redirect("/search")
         #failed attempt!
         else:
             return render_template("home.html",type_login=1)
