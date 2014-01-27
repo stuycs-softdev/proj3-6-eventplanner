@@ -104,7 +104,7 @@ def makeevent():
         
 @app.route("/profile")
     def profile():
-        return render_template("profile.html")
+        return render_template("profile.html", username = session['username'])
         ##UPDATE LATER TO DISPLAY USER'S EVENTS
 
 
