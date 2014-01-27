@@ -8,8 +8,6 @@ def register(username, password, confirm, securityq, securitya):
     elif db.Collections.find_one({"username" : username}) is None:
         db.Collections.insert({ "username" : username, "password" : password, "securityq" : securityq, "securitya" : securitya })
         return True
-    else:
-        redirect("register")
     return False
 
 def getDB():
