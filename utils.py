@@ -67,7 +67,7 @@ def changePass(username, oldpass, newpass):
 
 def addEvent(result):
     db = getDB()
-    db.update({'events' : events.append({'location': result[location], 'date' : result[date], 'time' : result[time], 'attendees' : result[attendees]})}
+    db.update({'events' : events.append({'location': result[location], 'date' : result[date], 'time' : result[time], 'attendees' : result[attendees]})})
     
 def getEvents(username):
     temp = db.find_one({'username': username})
