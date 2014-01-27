@@ -44,7 +44,7 @@ def checkPass(username, password):
     else:
         return True
     
-    
+  """  
 
 def changePass(username, oldpass, newpass):
 #Change the user's password, maintain username.
@@ -54,6 +54,7 @@ def changePass(username, oldpass, newpass):
         return True
     else:
         return False
+ """
 
 def addEvent(result):
     db = getDB()
