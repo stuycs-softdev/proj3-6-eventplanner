@@ -62,10 +62,6 @@
     margin: 30px 0 20px 0;
 }
 
-.subhead1 {
-    
-}
-
 body {
     color:white;
     font-family:"Avantgarde",sans-serif;
@@ -108,5 +104,43 @@ p {
 
 .information {
     background-color:#87CEFA; 
-    height:600px;
+    height:550px;
+}
+
+.information h2 {
+    font-size: 3em; 
+    padding: 0.5em 2em 2em 2em; 
+    color: white; 
+} 
+
+.pure-g-r marketing-ribbon {
+    border-bottom: 2px solid #eee;
+    padding: 1em 0;
+}
+
+.marketing-ribbon .content {
+    margin-bottom: 0;
+}
+
+.marketing-ribbon h3 {
+    font-size: 1.50em;
+    font-weight: bold;
+    color: #008080;
+}
+
+.marketing-ribbon p {
+    font-size: 125%;
+    line-height: 1.6em;
+}
+
+.box {
+    margin: 0 1em;
+}
+
+.box-left {
+    margin-left: 0;
+}
+
+.box-right {
+    margin-right: 0;
 }
