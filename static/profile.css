@@ -1,1 +1,35 @@
-/*profile css*/
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-image: url('../static/images/light.jpg');
+}
+
+
+.hero {
+    text-align: center;
+    margin: 10em auto 10em auto;
+}
+
+.hero-titles {
+    padding: 0 2em;
+}
+
+.hero h1 {
+    font-size: 4em;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    color: #B0C4DE;
+}
+
+.hero h2 {
+    font-size: 3em;
+    font-weight: 200;
+    color: #F0F8FF;
+    padding: 0;
+    margin-top: 0;
+    margin: 0.02em 0 0.8em;
+
+}

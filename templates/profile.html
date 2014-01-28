@@ -1,20 +1,22 @@
 <!DOCTYPE>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
-		<title> Home </title>
-		<link r	el="stylesheet" href="http:/yui.yahooapis.com/pure-min/0.3.0/pure-min.css">
-		<link rel="statictylesheet" href="../static/profile.css">	
-	</head>		
-
-	<body>
-		<h1> {{username}}'s Profile </h1>
-		<h2> Events</h2>
-		<ul>
-			{% for item in events %}
-			<li> On {{item['date']}} at {{item['time']}} at {{item['location']}} </li>
-			{% endfor %}
-		</ul>
-
-	</body>
+  <head>
+    <meta charset="utf-8">
+    <title> Profile Page </title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure-min/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="../static/profile.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>	
+  </head>		
+  
+  <body>
+    <h1> {{username}}'s Profile </h1>
+    <h2> Events </h2>
+    <ul>
+      {% for item in events %}
+      <li> On {{item['date']}} at {{item['time']}} at {{item['location']}} </li>
+      {% endfor %}
+    </ul>
+  </body>
+  
+</html>
