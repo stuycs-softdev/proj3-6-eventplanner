@@ -19,22 +19,23 @@ def home():
 
 @app.route("/register", methods = ["GET", "POST"])
 def register():
-     if request.method == "GET":
-         return render_template("register.html")
-
-     elif not utils.loggedIn():
-         username = request.form["username"]
-         password = request.form["password"]
-         confirm = request.form["confirm"]
-         securityq = request.form["securityq"]
-         securitya = request.form["securitya"]
-
-         if utils.register(username, password, confirm, securityq, securitya):
-             return redirect(url_for("home"))
-         else:
+    if "username" in session:
+    	return redirect(url_for("search"))
+    if request.method == "GET":
+        return render_template("register.html")
+    if "username" not in session:
+        username = request.form["username"]
+        password = request.form["password"]
+        confirm = request.form["confirm"]
+        securityq = request.form["securityq"]
+        securitya = request.form["securitya"]
+        if utils.register(username, password, confirm, securityq, securitya):
+            session["username"] = username
+            return redirect(url_for("search"))
+        else:
              return redirect(url_for("register"))
      else:
-         return redirect(url_for("home"))
+         return redirect(url_for("search"))
 
         
 @app.route("/login", methods = ["GET", "POST"])
