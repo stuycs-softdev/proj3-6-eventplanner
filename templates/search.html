@@ -1,21 +1,22 @@
-1<!DOCTYPE>
+<!DOCTYPE>
 
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title> Home </title>
+    <title> Search  </title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
     <link rel="stylesheet" href="../static/search.css">
   </head>
   
   <body>
-    <div class="bg">
-      <div class="bar">
-        <p id="title">
-            groupvent
-          <a id="prof" href="/profile"> Profile </a>
-        </p>  
+      <div class="pure-menu pure-menu-open pure-menu-horizontal menu">
+	<a href="/" class="pure-menu-heading">GroupVent</a>
+	<ul>
+          <li><a href="/profile">Your Profile</a></li>
+          <li><a href="#logoutModal">Logout</a></li>
+	</ul>
       </div>
+      
       <div class="hero">
 	<div class="hero-titles"> 
 	  <h1>Welcome, {{username}}</h1>
@@ -23,28 +24,32 @@
 	</div>
       </div>
       
-      <form class="pure-form pure-form-aligned" id="form" action = "/search" method="post">
-  	<fieldset>
-	  <div class="pure-control-group"> 
-            <label id="keyword"> Search by a keyword of what you want to do: </label>
-  	    <input class="pure-input-1-2" type="search" name="keyword" placeholder="Keyword">
+      <div class="pure-g-1-1">
+	<div id="outer_wrap">
+	  <div id="wrap">
+	    <div id="wrap_background"></div>
+	    <form class="pure-form pure-form-aligned" id="form" action="/search" method="post">
+  	      <fieldset>
+		<div class="pure-control-group"> 
+  		  <input class="pure-input-1" type="search" name="keyword" placeholder="Search by keyword(s)!">
+		</div>
+		<br>
+		<br>
+		<br>
+		<div class="pure-control-group">
+		  <input class="pure-input-1" type="search" name="location" placeholder ="Search by location!">
+		</div>
+		<br>
+		<br>
+		<div class="pure-control-group">
+  		  <button type="submit" class="pure-button pure-button-primary">Search</button>
+		</div>
+  	      </fieldset>
+	    </form>
 	  </div>
-          <br>
-          <br>
-          <br>
-	  <div class="pure-control-group">
-            <label id="location"> Or search by where you want to be: </label>
-            <input class="pure-input-1-2" type="search" name="location" placeholder ="Location">
-	  </div>
-          <br>
-          <br>
-	  <div class="pure-control-group">
-  	    <button type="submit" class="pure-button pure-button-primary">Search</button>
-	  </div>
-  	</fieldset>
-      </form>
-    </div>
-    
+	</div>
+      </div>
+      
   </body>
   
 </html>
