@@ -86,7 +86,9 @@ def share():
 @app.route("/makeevent")
 def makeevent():
     if "username" not in session:
-	    return redirect("home")
+	    return redirect(url_for("login"))
+    if "results" not in session:
+        return redirect(url_for("search"))
     if request.method=="POST":
         result = {"location" : str(request.form.get("event_location","")),
 		  "date" : str(request.form.get("event_date","")),
@@ -95,9 +97,8 @@ def makeevent():
 	for key in result:
 	    if result[key] == None:
 		return redirect("makeevent")    
-            else:
-		utils.addEvent(result)    
-                return render_template("profile.html")
+        utils.addEvent(result)    
+        return render_template("profile.html")
     else:
         return render_template("makeevent.html")
         
