@@ -71,7 +71,7 @@ def search():
 @app.route("/results")
 def results():
     if "results" not in session:
-        return redirect("route")
+        return redirect("search")
     else:
         return render_template("results.html", results=session["results"])
 
