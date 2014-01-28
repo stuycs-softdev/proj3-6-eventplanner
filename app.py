@@ -61,16 +61,10 @@ def logout():
 def search():
     if request.method == "GET":
 	return render_template("search.html")
-    start = request.form.get("1","")
-    end = request.form.get("2","")
-    if start == None or end == None:
-        return render_template("route.html")
-    try:
-        results = yelp.search(food, location)
-    except KeyError:
-        return render_template("results.html")
-    session["results"] = results
-    return redirect("results")
+    food = request.form['food']
+    location = request.form['location']
+    results = yelp.search(food, location)
+    return redirect("results", results=results)
     
 
 
