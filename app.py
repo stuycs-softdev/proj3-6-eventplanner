@@ -46,9 +46,9 @@ def login():
         password = request.form["password"]
         if utils.authorize(username, password):
             session["username"] = username
+            return redirect(url_for("search"))
         else:
             return redirect(url_for("home"))
-    return redirect(url_for("search"))
 
 @app.route("/logout")
 def logout():
@@ -63,15 +63,15 @@ def search():
 	return render_template("search.html")
     keyword = request.form['keyword']
     location = request.form['location']
-    results = yelp.search(keyword, location)
-    return redirect("results", results=results)
+    session["results"] =  yelp.search(keyword, location)
+    return redirect("/results")
     
 
 
 @app.route("/results")
 def results():
     if "results" not in session:
-        return redirect("route")
+        return redirect("search")
     else:
         return render_template("results.html", results=session["results"])
 

@@ -9,7 +9,7 @@ def search(term, address):
     token = '4Q20XFJ24cB8SL1CRKWY_2kNYqGnk60y'
     token_secret = '2hPhKm5s4kt8L5EicFD3h26cLh4'
     consumer= oauth2.Consumer(consumer_key,consumer_secret)
-    url= 'http://api.yelp.com/v2/search?term=%s&location=%s&limit=%d&format=json&radius_filter=400&category=food'%(term, address, 5)
+    url= 'http://api.yelp.com/v2/search?term=%s&location=%s&limit=%d&format=json'%(term, address, 5)
     oauth_request = oauth2.Request('GET', url, {})
     oauth_request.update({'oauth_nonce': oauth2.generate_nonce(),
                           'oauth_timestamp': oauth2.generate_timestamp(),
