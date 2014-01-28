@@ -63,8 +63,8 @@ def search():
 	return render_template("search.html")
     keyword = request.form['keyword']
     location = request.form['location']
-    results = yelp.search(keyword, location)
-    return redirect("results", results=results)
+    session["results"] =  yelp.search(keyword, location)
+    return redirect("results")
     
 
 
