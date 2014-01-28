@@ -19,14 +19,14 @@ body {
 
 .hero h1 {
     font-size: 4em;
-    font-weight: 500;
+    font-weight: 300;
     margin: 0;
     padding: 0;
     color:#008080;
 }
 
 .hero h2 {
-    font-size: 3.5em;
+    font-size: 3em;
     font-weight: 200;
     color: #4169E1;
     padding: 0;
