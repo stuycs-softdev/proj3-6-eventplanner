@@ -34,7 +34,7 @@ def register():
             return redirect(url_for("search"))
         else:
              return redirect(url_for("register"))
-     else:
+    else:
          return redirect(url_for("search"))
 
         
