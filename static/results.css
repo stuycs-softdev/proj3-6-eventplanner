@@ -10,7 +10,7 @@ body
 h1
 {
 	text-align: center;
-	color: white;
+	color: black;
 	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
 	letter-spacing: 3px;
 	font-size: 200%;
@@ -19,7 +19,7 @@ h1
 #results
 {
 	text-align: center;
-	color: white;
+	color: black;
 	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
 	font-size: 150%;
 }
