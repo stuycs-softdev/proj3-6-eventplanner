@@ -1,10 +1,10 @@
-<!DOCTYPE>
+1<!DOCTYPE>
 
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <title> Home </title>
-    <link rel="stylesheet" href="http:/yui.yahooapis.com/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
     <link rel="stylesheet" href="../static/search.css">
   </head>
   
@@ -12,28 +12,39 @@
     <div class="bg">
       <div class="bar">
         <p id="title">
-            Edric's Plan-tations
+            groupvent
           <a id="prof" href="profile.html"> Profile </a>
         </p>  
       </div>
-      <h1>Welcome, {{username}}</h1>
-      <h2>Want to make an event? Start your search here:</h2>
+      <div class="hero">
+	<div class="hero-titles"> 
+	  <h1>Welcome, {{username}}</h1>
+	  <h2>Want to make an event? Start your search here:</h2>
+	</div>
+      </div>
+      
       <form class="pure-form pure-form-aligned" id="form" action = "/search" method="post">
-  		  <fieldset>
-          <label class="searchby" id="keyword"> Search by a keyword of what you want to do: </label>
-  		    <input type="search" name="keyword" nameplaceholder ="Keyword">
+  	<fieldset>
+	  <div class="pure-control-group"> 
+            <label id="keyword"> Search by a keyword of what you want to do: </label>
+  	    <input class="pure-input-1-2" type="search" name="keyword" placeholder="Keyword">
+	  </div>
           <br>
           <br>
           <br>
-          <label class="searchby" id="location"> Or search by where you want to be: </label>
-          <input type="search" name="location" placeholder ="Location">
+	  <div class="pure-control-group">
+            <label id="location"> Or search by where you want to be: </label>
+            <input class="pure-input-1-2" type="search" name="location" placeholder ="Location">
+	  </div>
           <br>
           <br>
-  		    <button type="submit" class="pure-button pure-button-primary">Search</button>
-  		  </fieldset>
-  	  </form>
+	  <div class="pure-control-group">
+  	    <button type="submit" class="pure-button pure-button-primary">Search</button>
+	  </div>
+  	</fieldset>
+      </form>
     </div>
-
+    
   </body>
   
 </html>

@@ -8,6 +8,44 @@ body
 
 }
 
+label {
+    letter-spacing: 3px;
+    text-align: center;
+    font-family: "Avantgarde" , sans-serif;
+    color: black;
+    font-size: 200%;
+    font-weight: bold;
+}
+
+
+.hero {
+    text-align: center;
+    margin: 10em auto 10em auto;
+}
+
+.hero-titles {
+    padding: 0 2em;
+}
+
+.hero h1 {
+    font-size: 4em;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    color: #B0C4DE;
+}
+
+.hero h2 {
+    font-size: 3em;
+    font-weight: 200;
+    color: #F0F8FF;
+    padding: 0;
+    margin-top: 0;
+    margin: 0.02em 0 0.8em;
+
+}
+
+
 
 .bar
 {
@@ -53,16 +91,14 @@ h2
 {
 	text-align: center;
 }
-
+/*
 .searchby
 {
 	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
 	color:white;
-	font-size: 500%;
-	;
 
 }
-
+*/
 #keyword
 {
 	position: absolute;
