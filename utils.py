@@ -3,12 +3,11 @@ from flask import session
 
 def register(username, password, confirm, securityq, securitya):
     db = getDB()
-    if password != confirm:
-        pass
-    elif db.Collections.find_one({"username" : username}) is None:
-        db.Collections.insert({ "username" : username, "password" : password, "securityq" : securityq, "securitya" : securitya })
+    if password == confirm and db.Collections.find_one({"username" : username}) is None:
+        db.Collections.insert({ "username" : username, "password" : password, "securityq" : securityq, "securitya" : securitya, "events" : [] })
         return True
-    return False
+    else:
+        return False
 
 def getDB():
     client = MongoClient()
