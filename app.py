@@ -61,9 +61,9 @@ def logout():
 def search():
     if request.method == "GET":
 	return render_template("search.html")
-    food = request.form['food']
+    keyword = request.form['keyword']
     location = request.form['location']
-    results = yelp.search(food, location)
+    results = yelp.search(keyword, location)
     return redirect("results", results=results)
     
 
