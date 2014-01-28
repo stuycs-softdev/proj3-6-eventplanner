@@ -53,3 +53,24 @@ h2
 {
 	text-align: center;
 }
+
+.searchby
+{
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+	color:white;
+	font-size: 500%;
+	;
+
+}
+
+#keyword
+{
+	position: absolute;
+	left: 250px;
+}
+
+#location
+{
+	position: absolute;
+	left:325px;
+}

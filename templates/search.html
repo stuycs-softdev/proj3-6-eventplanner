@@ -18,9 +18,17 @@
       </div>
       <h1>Welcome, {{username}}</h1>
       <h2>Want to make an event? Start your search here:</h2>
-      <form class="pure-form" id="form">
+      <form class="pure-form pure-form-aligned" id="form">
   		  <fieldset>
-  		    <input type="search" placeholder ="Keyword, place, etc...">
+          <label class="searchby" id="keyword"> Search by a keyword of what you want to do: </label>
+  		    <input type="search" placeholder ="Keyword">
+          <br>
+          <br>
+          <br>
+          <label class="searchby" id="location"> Or search by where you want to be: </label>
+          <input type="search" placeholder ="Location">
+          <br>
+          <br>
   		    <button type="submit" class="pure-button pure-button-primary">Search</button>
   		  </fieldset>
   	  </form>
