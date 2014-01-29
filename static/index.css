@@ -103,13 +103,13 @@ p {
 }
 
 .information {
-    background-color:#87CEFA; 
-    height:550px;
+    background-color:#483D8B;
+    height:600px;
 }
 
 .information h2 {
     font-size: 3em; 
-    padding: 0.5em 2em 2em 2em; 
+    padding: 0.5em 2em 1em 2em; 
     color: white; 
 } 
 
