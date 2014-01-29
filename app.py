@@ -100,7 +100,7 @@ def makeevent():
         utils.addEvent(result)    
         return render_template("profile.html")
     else:
-        return render_template("makeevent.html")
+        return render_template("makeevent.html", results=session["results"])
         
 @app.route("/profile")
 def profile():
