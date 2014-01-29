@@ -12,7 +12,7 @@ function cycleImages() {
 
 $(window).load(function(){
     $('#background_cycler').fadeIn(1500);
-    setInterval('cycleImages()', 3000);
+    setInterval('cycleImages()', 8000);
 })
 
 // scrolling thing
