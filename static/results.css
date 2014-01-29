@@ -1,6 +1,5 @@
 body {
-    /*background-image: url(images/party_08.jpg);*/
-    background-color: #6495ED; 
+    background-image: url(../static/images/background_2.jpg);
     background-size: cover;
     z-index: -1;   
 }	
@@ -9,6 +8,7 @@ body {
     background: transparent; 
     text-align: center;
     font-size: 1.25em; 
+    margin: -1em; 
 }
 
 .pure-menu .pure-menu-heading {
@@ -21,16 +21,35 @@ body {
 }
 
 
-h1 {
+.hero {
     text-align: center;
-    color: black;
-    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-    letter-spacing: 3px;
-    font-size: 200%;
+    margin: 2em auto 2em auto;
 }
 
-#results {
-    text-align: center;
+.hero-titles {
+    padding: 0 2em;
+}
+
+.hero h1 {
+    font-size: 300%;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    color: #008B8B; 
+}
+
+.hero h2 {
+    font-size: 1.5em;
+    font-weight: 200;
+    color:#F08080; 
+    padding: 0;
+    font-style: oblique; 
+    margin: 0.5em 0 0.8em;
+
+}
+
+.pure-u-3-5 li a {
+    text-align: justify;
     color: black;
     font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
     font-size: 150%;
