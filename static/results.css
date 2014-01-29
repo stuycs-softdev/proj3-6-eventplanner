@@ -5,6 +5,22 @@ body {
     z-index: -1;   
 }	
 
+.pure-menu.pure-menu-open {
+    background: transparent; 
+    text-align: center;
+    font-size: 1.25em; 
+}
+
+.pure-menu .pure-menu-heading {
+    color: #FFF5EE; 
+    font-weight: bold; 
+}
+
+.pure-menu li a {
+    color:#00FFFF; 
+}
+
+
 h1 {
     text-align: center;
     color: black;

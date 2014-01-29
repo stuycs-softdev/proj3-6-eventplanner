@@ -10,6 +10,16 @@
   </head>
   
   <body>
+
+    <div class="pure-menu pure-menu-open pure-menu-horizontal menu">
+      <a href="/" class="pure-menu-heading">GroupVent</a>
+      <ul>
+        <li><a href="/profile">Your Profile</a></li>
+	<li><a href="/search">New Search</a></li>
+        <li><a href="#logoutModal">Logout</a></li>
+      </ul>
+    </div>
+    
     
     <h1> Results from Search of {{keyword}}! </h1>
     <div class="pure-g">
@@ -41,7 +51,7 @@
 	    Start planning! 
 	    <br> 
 	  </p>
-	  <form class="pure-form pure-form-stacked" method="post">
+	  <form class="pure-form pure-form-stacked" action="/makeevent" method="post">
 	    
 	    <input name="title" type="text" placeholder="Title" required>
 	    <div class="pure-control-group">
